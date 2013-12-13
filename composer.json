@@ -15,7 +15,6 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "dev-master",
         "byends/laravel-pdo-via-oci8": "dev-master"
     },
     "autoload": {
