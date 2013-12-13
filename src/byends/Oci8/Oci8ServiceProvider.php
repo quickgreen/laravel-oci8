@@ -1,6 +1,6 @@
-<?php namespace yajra\Oci8;
+<?php namespace byends\Oci8;
 
-use Illuminate\Support\ServiceProvider;
+use \Illuminate\Support\ServiceProvider;
 use Config;
 
 class Oci8ServiceProvider extends ServiceProvider {
@@ -19,7 +19,7 @@ class Oci8ServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('yajra/oci8');
+		$this->package('byends/oci8');
 	}
 
 	/**
@@ -30,7 +30,7 @@ class Oci8ServiceProvider extends ServiceProvider {
 	public function register()
 	{
 
-		//Extend the connections with pdo-via-oci8 drivers by using a yajra\pdo\oci8 connector
+		//Extend the connections with pdo-via-oci8 drivers by using a byends\pdo\oci8 connector
 		foreach(Config::get('database.connections') as $conn => $config)
 		{
 

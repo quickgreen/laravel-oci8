@@ -1,9 +1,9 @@
-# Laravel 4 Oracle (OCI8) Database Support
+# Laravel 4.1 Oracle (OCI8) Database Support
 
 Laravel-OCI8
 ============
 
-Laravel-OCI8 is an Oracle Database Driver package for [Laravel 4](http://laravel.com/). Laravel-OCI8 is an extension of [Illuminate/Database](https://github.com/illuminate/database) that uses yajra/laravel-pdo-via-oci8 to communicate with Oracle.
+Laravel-OCI8 is an Oracle Database Driver package for [Laravel 4.1](http://laravel.com/). Laravel-OCI8 is an extension of [Illuminate/Database](https://github.com/illuminate/database) that uses byends/laravel-pdo-via-oci8 to communicate with Oracle.
 
 The PDO-via-OCI8 package is a simple userspace driver for PDO that uses the tried and
 tested OCI8 functions instead of using the still experimental and not all that functionnal
@@ -17,12 +17,12 @@ Also note that this package is highly dependant on jfelder/oracledb for all the 
 Installation
 ============
 
-Add `yajra/laravel-oci8` as a requirement to composer.json:
+Add `byends/laravel-oci8` as a requirement to composer.json:
 
 ```json
 {
     "require": {
-        "yajra/laravel-oci8": "*"
+        "byends/laravel-oci8": "*"
     }
 }
 ```
@@ -31,7 +31,7 @@ And then run `composer update`
 Once Composer has installed or updated your packages you need to register the service provider. Open up `app/config/app.php` and find the `providers` key and add:
 
 ```php
-'yajra\Oci8\Oci8ServiceProvider'
+'byends\Oci8\Oci8ServiceProvider'
 ```
 
 Finally you need to setup a valid database configuration using the driver "pdo-via-oci8". Configure your connection as usual with:
@@ -52,7 +52,7 @@ Support
 =======
 Just like the built-in database drivers, you can use the connection method to access the oracle database(s) you setup in the database config file.
 
-See [Laravel 4 Database Basic Docs](http://four.laravel.com/docs/database) for more information.
+See [Laravel 4.1 Database Basic Docs](http://laravel.com/docs/database) for more information.
 
 Also compatible with:
 
@@ -72,7 +72,7 @@ Configuration (database.php)
     'driver' => 'pdo-via-oci8',
     'host' => '127.0.0.1',
     'port' => '1521',
-    'database' => 'xe', // Service ID
+    'database' => 'sp', // Service ID
     'username' => 'schema',
     'password' => 'password',
     'charset' => '',
@@ -87,7 +87,7 @@ DB::select('select * from mylobs');
 
 The lovely Oracle BLOB >.<
 
-Querying a blob field will now load the value instead of the OCI-Lob object. See [yajra/laravel-pdo-via-oci8](https://github.com/yajra/laravel-pdo-via-oci8) for blob conversion details.
+Querying a blob field will now load the value instead of the OCI-Lob object. See [byends/laravel-pdo-via-oci8](https://github.com/byends/laravel-pdo-via-oci8) for blob conversion details.
 ```php
 $data = DB::table('mylobs')->get();
 foreach ($data as $row) {
@@ -135,4 +135,4 @@ DB::setDateFormat('MM/DD/YYYY');
 
 CREDITS
 =======
-forked from [crazycodr/laravel-oci8](https://github.com/crazycodr/laravel-oci8)
+forked from [yajra/laravel-pdo-via-oci8](https://github.com/yajra/laravel-pdo-via-oci8)

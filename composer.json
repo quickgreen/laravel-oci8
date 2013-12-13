@@ -1,20 +1,20 @@
 {
-    "name": "yajra/laravel-oci8",
+    "name": "byends/laravel-oci8",
     "description": "Laravel PDO Userspace wrapper around Oci8 functions",
     "authors": [
         {
-            "name": "yajra - Arjay Angeles",
-            "email": "aqangeles@gmail.com"
+            "name": "byends",
+            "email": "byends@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.x",
-        "yajra/laravel-pdo-via-oci8": "dev-master"
+        "illuminate/support": "dev-master",
+        "byends/laravel-pdo-via-oci8": "dev-master"
     },
     "autoload": {
         "psr-0": {
-            "yajra\\Oci8": "src/"
+            "byends\\Oci8": "src/"
         }
     },
     "minimum-stability": "dev"

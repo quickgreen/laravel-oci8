@@ -1,8 +1,9 @@
-<?php namespace yajra\Oci8\Query\Grammars;
+<?php namespace byends\Oci8\Query\Grammars;
 
 use \Illuminate\Database\Query\Builder;
+use \Illuminate\Database\Query\Grammars\Grammar;
 
-class OracleGrammar extends \Illuminate\Database\Query\Grammars\Grammar {
+class OracleGrammar extends Grammar {
 
 	/**
 	 * The keyword identifier wrapper format.
@@ -75,21 +76,21 @@ class OracleGrammar extends \Illuminate\Database\Query\Grammars\Grammar {
 		return ">= {$start}";
 	}
 
-	/**
-	 * Compile a common table expression for a query.
-	 *
-	 * @param  string  $sql
-	 * @param  string  $constraint
-	 * @return string
-         *
- 	 */
-	protected function compileTableExpression($sql, $constraint, $query)
+    /**
+     * Compile a common table expression for a query.
+     *
+     * @param $sql
+     * @param $constraint
+     * @param $query
+     * @return string
+     */
+    protected function compileTableExpression($sql, $constraint, $query)
 	{
-            if ($query->limit > 0) {
-                return "select t2.* from ( select ROWNUM AS \"rn\", t1.* from ({$sql}) t1 ) t2 where t2.\"rn\" {$constraint}";
-            } else {
-                return "select * from ({$sql}) where rownum {$constraint}";
-            }
+        if ($query->limit > 0) {
+            return "select t2.* from ( select ROWNUM AS \"rn\", t1.* from ({$sql}) t1 ) t2 where t2.\"rn\" {$constraint}";
+        } else {
+            return "select * from ({$sql}) where rownum {$constraint}";
+        }
 	}
 
 	/**
