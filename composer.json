@@ -1,12 +1,4 @@
 {
-    "name": "byends/laravel-oci8",
-    "description": "Laravel PDO Userspace wrapper around Oci8 functions",
-    "authors": [
-        {
-            "name": "byends",
-            "email": "byends@gmail.com"
-        }
-    ],
     "repositories": [
         {
             "type": "vcs",
