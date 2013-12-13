@@ -10,12 +10,12 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/byends/laravel-pdo-via-oci8"
+            "url": "https://github.com/quickgreen/laravel-pdo-via-oci8"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "byends/laravel-pdo-via-oci8": "*"
+        "quickgreen/laravel-pdo-via-oci8": "*"
     },
     "autoload": {
         "psr-0": {
