@@ -1,4 +1,12 @@
 {
+    "name": "quickgreen/laravel-oci8",
+    "description": "Laravel PDO Userspace wrapper around Oci8 functions",
+    "authors": [
+        {
+            "name": "quickgreen",
+            "email": "quickgreen@gmail.com"
+        }
+    ],
     "repositories": [
         {
             "type": "vcs",
