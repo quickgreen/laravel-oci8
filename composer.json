@@ -7,6 +7,12 @@
             "email": "byends@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/byends/laravel-pdo-via-oci8"
+        }
+    ],
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "dev-master",
