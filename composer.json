@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "quickgreen/laravel-pdo-via-oci8": "*"
+        "quickgreen/laravel-pdo-via-oci8": "1.4"
     },
     "autoload": {
         "psr-0": {
